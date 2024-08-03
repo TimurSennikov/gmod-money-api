@@ -11,7 +11,7 @@ if not sql.TableExists("balance_table") then
 	sql.Query("CREATE TABLE balance_table (Player TEXT, Money INTEGER)")
 end
 
-hook.Add("PlayerSay", "testHook", function(ply, text) -- этот хук тут для теста, если я лох и забыл ее удалить, то South, сделай это!
+hook.Add("PlayerSay", "testHook", function(ply, text)
     local splittedString = string.Split(text, '"')
 
     if text == "!iwantmore" and ply:IsSuperAdmin() then
